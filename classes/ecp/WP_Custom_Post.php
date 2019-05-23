@@ -35,7 +35,8 @@ abstract class WP_Custom_Post {
 				'hierarchical' => false,
 				'rewrite' => array("slug" => $this->_name), // Permalinks
 				'query_var' => $this->_name, // This goes to the WP_Query schema
-				'supports' => array('title'/*,'custom-fields'*/), // Let's use custom fields for debugging purposes only
+                'supports' => array('title'/*,'custom-fields'*/), // Let's use custom fields for debugging purposes only
+                'show_in-rest' => true,
 			), $register_options);
 
 			// Register custom post types
